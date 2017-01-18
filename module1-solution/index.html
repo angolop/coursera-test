@@ -1,10 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='CountApp'>
   <head>
     <meta charset="utf-8">
-    <title>Hello Coursera</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <style> body { font-size: 1.2em; }</style>
+    <title>LunchCheck</title>
   </head>
   <body>
-    <h1>Hello Coursera students!!!</h1>
+    <h1>LunchCheck</h1>
+    <div ng-controller='CountController'>
+      <div>
+        <input type="text" ng-model="message">
+      </div>
+      <div>
+        {{returnMsg}}
+      </div>
+      <div>
+        <button type="button" ng-click="CheckIfTooMuch()" name="button">Check If Too Much</button>
+      </div>
+
+    </div>
   </body>
 </html>
