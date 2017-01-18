@@ -25,18 +25,11 @@ if(arrayOfStrings.length>1){
       }
     }
 
-    console.log(arrayOfStrings);
-    console.log(returnArray);
-    console.log('The original string is: "' + stringToSplit + '"');
-    console.log('The array has ' + arrayOfStrings.length + ' elements: ' + arrayOfStrings.join(' / '));
     return returnArray;
   }
 
   $scope.CheckIfTooMuch = function(){
-    console.log("test1");
     var array = $scope.splitString($scope.message);
-    console.log($scope.message);
-
     if (array.length==0) {
       if ($scope.message.indexOf(",")== -1) {
       $scope.returnMsg="Please enter data first";
