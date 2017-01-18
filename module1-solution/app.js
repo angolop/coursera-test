@@ -32,14 +32,18 @@ if(arrayOfStrings.length>1){
     var array = $scope.splitString($scope.message);
     if (array.length==0) {
       if ($scope.message.indexOf(",")== -1) {
-      $scope.returnMsg="Please enter data first";
+        $scope.returnMsg="Please enter data first";
+        $scope.myStyle = {color : 'red' , 'border-color': "red"};
       } else {
         $scope.returnMsg="";
+        $scope.myStyle = "";
       }
     } else if (array.length>3) {
       $scope.returnMsg="Too much!";
+      $scope.myStyle = {color : 'blue' , 'border-color': "blue"};
     }else if (array.length<=3) {
       $scope.returnMsg="Enjoy!";
+      $scope.myStyle = {color : 'blue' , 'border-color': "blue"};
     }
   }
 }
